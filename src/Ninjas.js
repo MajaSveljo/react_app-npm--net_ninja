@@ -41,7 +41,7 @@ const Ninjas = ({ninjas}) => {
                             <div>{ninja.age}</div>
                             <div>{ninja.belt}</div>
                         </div>             
-                    ) : null;
+                    ) : null; 
             })
             }
         </div>
