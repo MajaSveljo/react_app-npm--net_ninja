@@ -2,15 +2,19 @@ import React, { Component } from 'react';
 
 class Ninjas extends Component{
     render() {
-        //this is called destructuring and it's destructuring props
-        //to their variables. they have to be the same name as the variable
-        //in which we want to use them in
-        const {name, age, belt} = this.props;
+        const {ninjas} = this.props;
+        const ninjaList = ninjas.map(ninja => {
+            return (
+                <div className="ninja" key={ninja.id}>
+                    <div>{ninja.name}</div>
+                    <div>{ninja.age}</div>
+                    <div>{ninja.belt}</div>
+                </div>
+            )
+        })
         return(
-            <div className="ninja">
-                <div>{name}</div>
-                <div>{age}</div>
-                <div>{belt}</div>
+            <div className="ninja-list">
+                {ninjaList}
             </div>
         )
     }
